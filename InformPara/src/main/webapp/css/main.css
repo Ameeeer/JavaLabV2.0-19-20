@@ -1,0 +1,50 @@
+.registrationform {
+    position: relative;
+    padding-left: 20em;
+    position: relative;
+}
+
+.mainPage {
+    background-color: snow;
+}
+
+#controlPanel_1{
+    top: 50%;
+    margin-top: 20em;
+    text-align: center;
+    margin-left: 6em;
+}
+#controlPanel_2{
+    top: 50%;
+    margin-top: 2em;
+    text-align: center;
+    margin-left: 6em;
+}
+.controlRecize{
+    min-width: 15em;
+}
+body {
+    min-width: 600px;
+    min-height: 200px;
+}
+
+#signIn {
+    margin-right: 19em;
+    margin-bottom: 40em;
+}
+
+#signUp {
+    margin-left: 4.9em;
+    margin-right: 0.8em;
+    margin-bottom: 56em;
+}
+
+.form-group {
+    min-width: 5em;
+    margin-left: -100px;
+    box-sizing: border-box;
+}
+
+#email, #password {
+    min-width: 280px;
+}
