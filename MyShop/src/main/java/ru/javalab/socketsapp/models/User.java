@@ -8,57 +8,33 @@ public class User {
     private String token;
     private String role;
 
-    public User(String login, String password, String token) {
-        this.login = login;
-        this.password = password;
-        this.token = token;
-    }
-
-    public User(Long id, String login, String password) {
-        this.id = id;
-        this.login = login;
-        this.password = password;
-    }
-
-    public User() {
-    }
-
-    public User(String login, String token) {
-        this.login = login;
-        this.token = token;
-    }
-
-    public String getLogin() {
-        return this.login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public String getPassword() {
-        return this.password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getMessage() {
-        return this.message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
+    private User() {
     }
 
     public Long getId() {
-        return this.id;
+        return id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getMessage() {
+        return message;
     }
 
     public String getToken() {
         return token;
     }
+
+    public String getRole() {
+        return role;
+    }
+
 
     @Override
     public String toString() {
@@ -69,5 +45,50 @@ public class User {
                 ", message='" + message + '\'' +
                 ", token='" + token + '\'' +
                 '}';
+
     }
+    public static Builder newBuilder(){
+        return new User().new Builder();
+    }
+
+    public class Builder {
+        private Builder() {
+        }
+
+        public Builder setId(Long id) {
+            User.this.id = id;
+            return this;
+        }
+
+        public Builder setLogin(String login) {
+            User.this.login = login;
+            return this;
+        }
+
+        public Builder setPassword(String password) {
+            User.this.password = password;
+            return this;
+        }
+
+        public Builder setMessage(String message) {
+            User.this.message = message;
+            return this;
+        }
+
+        public Builder setToken(String token) {
+            User.this.token = token;
+            return this;
+        }
+
+        public Builder setRole(String role) {
+            User.this.role = role;
+            return this;
+        }
+
+        public User build() {
+            return User.this;
+        }
+    }
+
+
 }

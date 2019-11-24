@@ -1,6 +1,7 @@
 package ru.javalab.socketsapp.programs.multiclientchat;
 
 import ru.javalab.socketsapp.clients.ChatClient;
+import ru.javalab.socketsapp.models.User;
 
 import java.util.Scanner;
 
@@ -14,7 +15,8 @@ public class ChatClientMain {
         String login = sc.next().trim();
         System.out.println("Введите Пароль");
         String password = sc.next().trim();
-        String userConnect = chatClient.createJSON(login,password);
+        User user = User.newBuilder().build();
+                String userConnect = chatClient.createJSON(login,password);
         chatClient.startConnection(serverIpAddress, port);
         System.out.println(userConnect);
         chatClient.sendMessage(userConnect);

@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class Connection {
+public class MyConnection {
 
     public java.sql.Connection connectToDB() {
         FileInputStream fileInputStream;

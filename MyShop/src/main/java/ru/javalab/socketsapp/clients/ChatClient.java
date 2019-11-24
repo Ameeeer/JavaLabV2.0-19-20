@@ -30,9 +30,7 @@ public class ChatClient {
     }
 
     public String createJSON(String login, String password) {
-        User user = new User();
-        user.setLogin(login);
-        user.setPassword(password);
+        User user = User.newBuilder().setLogin(login).setPassword(password).build();
         try {
             String jsonCreate = mapper.writeValueAsString(user);
             jsonUser = jsonCreate;
@@ -44,9 +42,7 @@ public class ChatClient {
     }
 
     public String jsonMessage(String login, String message) {
-        User user = new User();
-        user.setLogin(login);
-        user.setMessage(message);
+        User user = User.newBuilder().setLogin(login).setMessage(message).build();
         try {
             String jsonCreate = mapper.writeValueAsString(user);
             jsonUser = jsonCreate;
